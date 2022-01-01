@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&family=Ubuntu:ital,wght@0,500;1,400&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Beauty Lab</title>
+</head>
+<body>
+<header th:insert="blocks/header.html"/>
+
+<section class="container user_page">
+    <div class="wrapper">
+        <div>
+            <h2>Моя Корзина</h2>
+            <div class="wrapper products">
+                <div class="product" th:each="el : ${orders}">
+                    <form method="post">
+                        <img th:src="'img/' + ${el.getProductImg()}" alt="">
+                        <h4 th:text="${el.getProductName()}"/>
+                        <p th:text="${el.getProductPrice()} +  'р'"/>
+                    </form>
+                    <a class="btn-action" th:href="'/delete_from_cart/' + ${el.getProductId()}">Удалить</a>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <form th:action="@{/logout}" method="post">
+                <input class="btn-logout" type="submit" value="Выход"/>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<footer th:insert="blocks/footer.html"/>
+</body>
+</html>

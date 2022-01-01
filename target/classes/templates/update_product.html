@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&family=Ubuntu:ital,wght@0,500;1,400&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Beauty Lab</title>
+</head>
+<body>
+<header th:insert="blocks/header.html"/>
+
+<section class="update_product">
+    <div class="container"  th:each="el : ${product}">
+        <form method="post">
+            <img th:src="'img/' + ${el.image}" alt="">
+            <input type="text" name="name" th:value="${el.name}"/>
+            <input type="number" name="price" th:value="${el.price}"/>
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+</section>
+<footer th:insert="blocks/footer.html"/>
+</body>

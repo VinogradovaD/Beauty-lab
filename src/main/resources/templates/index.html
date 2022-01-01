@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&family=Ubuntu:ital,wght@0,500;1,400&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Beauty Lab</title>
+</head>
+
+<body>
+<header th:insert="blocks/header.html"/>
+<section class="offer" id="about">
+    <div class="container">
+        <div class="wrapper">
+            <div class="about">
+                <h1>Главная наша ценность - люди</h1>
+                <p>Мы создаем наши продукты, чтобы помочь вам обрести эту любовь через заботу о себе и своей коже.
+                    Beauty Lab верит в красоту каждого человека. Наша миссия — помочь вам ощутить собственную
+                    красоту.</p>
+            </div>
+            <img src="images/offer-img.png" alt="girl" class="offer-img">
+        </div>
+    </div>
+</section>
+<section class="categories" id="categories">
+    <div class="container">
+        <h2>Категории</h2>
+        <div class="wrapper">
+            <a href="/catalog?category=1">
+                <div class="category">
+                    <img src="images/category_face.png" alt="">
+                    <h3>Для лица</h3>
+                    <p>&rarr;</p>
+                </div>
+            </a>
+            <a href="/catalog?category=2">
+                <div class="category">
+                    <img src="images/category_body.png" alt="">
+                    <h3>Для тела</h3>
+                    <p>&rarr;</p>
+                </div>
+            </a>
+            <a href="/catalog?category=3">
+                <div class="category">
+                    <img src="images/category_hair.png" alt="">
+                    <h3>Для волос</h3>
+                    <p>&rarr;</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<footer th:insert="blocks/footer.html"/>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#menu").on("click", "a", function (event) {
+            event.preventDefault();
+            var id = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({ scrollTop: top }, 500);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+input, p, a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    padding-top: 30px;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.catalog .wrapper {
+    justify-content: flex-start;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    width: 400px;
+    margin-left: 400px;
+    margin-top: 3px;
+}
+
+.nav a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    font-style: normal;
+    margin-left: 50px;
+}
+
+.icons .avatar {
+    width: 20px;
+}
+
+.about {
+    padding-top: 175px;
+}
+
+.about p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 450px;
+}
+
+.offer-img {
+    width: 450px;
+    margin-top: 108px;
+}
+
+.btn {
+    background-color: #BC9773;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
+    text-align: center;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.product {
+    margin-top: 60px;
+    width: 254px;
+    padding-bottom: 140px;
+    margin-right: 20px;
+}
+
+.product img {
+    width: 250px;
+}
+
+.product p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.categories {
+    padding-top: 100px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: black;
+}
+
+.category {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    width: 350px;
+    cursor: pointer;
+}
+
+.category img {
+    width: 340px;
+}
+
+footer {
+    background-color: #BC9773;
+    padding: 50px 0;
+}
+
+footer p {
+    text-align: right;
+    margin-right: 50px;
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2rem;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
+.form-login h2, input, button {
+    margin-bottom: 30px;
+}
+
+.form-login h2 {
+    text-align: center;
+}
+
+.form-login input {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid lightslategrey ;
+    outline: white;
+}
+
+input:-webkit-autofill {
+    color: #ffffff !important;
+}
+
+.form-login button {
+    width: 200px;
+    margin: 0 auto;
+    background-color: #BC9773;
+    box-shadow: none;
+}
+
+.form-login a {
+    margin-top: 15px;
+    color: gray;
+    text-align: center;
+}
+
+.create-product {
+    margin-top: 50px;
+}
+
+.create-product input, .create-product select {
+    margin-right: 10px;
+}
+
+.catalog {
+    padding: 100px 0;
+}
+
+.catalog h2 {
+    text-align: center;
+}
+
+.catalog .btn {
+    width: 100%;
+    box-shadow: none;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.catalog a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.admin-nav, .user_page {
+    padding-top: 70px;
+}
+
+.products{
+    width: 900px;
+    justify-content: left;
+}
+
+.products .product {
+    width: 200px;
+    padding-bottom: 100px;
+}
+
+.products img {
+    width: 200px;
+}
+
+.actions {
+    margin-top: 60px;
+}
+
+.admin-nav h2, .user_page h2 {
+    text-align: center;
+}
+
+.btn-logout, .btn-action {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+}
+
+.btn-logout {
+    border: none;
+    background-color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-action{
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.product form {
+    height: 90%;
+}
+
+.update_product img {
+    width: 200px;
+}
+
+.user_page .btn-logout {
+    font-size: 15px;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.edit-input {
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
